@@ -20,7 +20,7 @@ export const timelineData: TimeLineType[] = [
       "N8N (Zapier alternative)", 
       "Grafana"
     ],
-    date: "05/11/2023 - 06/10/2024",
+    date: "05/11/2023 - Present",
     description: "Temp staffing startup",
     location: "Brazil, Distrito Federal - Hybrid",
     responsibilities: [
