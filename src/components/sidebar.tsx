@@ -21,6 +21,13 @@ type SidebarProps = {
 export const Sidebar = ({geoData}: SidebarProps) => {
   const [open, setOpen] = useState(isMobile() ? false : true);
   const router = useRouter();
+  const resumeBtnOnclick = () => {
+    router.push("/resume")
+
+    if (isMobile()) {
+      setOpen(false)
+    } 
+  }
   return (
     <>
       <AnimatePresence>
@@ -37,7 +44,10 @@ export const Sidebar = ({geoData}: SidebarProps) => {
               <SidebarHeader geoData={geoData} />
               <Navigation setOpen={setOpen} />
             </ScrollArea>
-            <Button onClick={() => router.push("/resume")} className="rounded-full shadow-md w-[180px] z[110] mb-4">
+            <Button 
+              onClick={resumeBtnOnclick}
+              className="rounded-full shadow-md w-[180px] z[110] mb-4"
+            >
               <span className="text-sm font-semibold text-primary-foreground">Read resume</span>
               <ChevronRightIcon className="ml-auto w-4 h-4 text-primary-foreground" />
             </Button>
