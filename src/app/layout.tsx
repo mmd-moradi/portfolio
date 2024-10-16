@@ -6,6 +6,7 @@ import { Sidebar } from "@/components/sidebar";
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/sonner"
 import Footer from "@/components/footer";
+import { cookies } from "next/headers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,7 +15,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Moohammad Moradi - Full Stack Developer",
-  description: "Mohammad Moradi is a full-stack developer specializing in React, Next.js, Node.js, and Express, with experience in MongoDB, PostgreSQL, and Docker. He builds scalable web applications, focusing on clean code, performance, and seamless user experiences.",
+  description: "Passionate about building impactful software, Mohammad Moradi is a full-stack developer dedicated to creating scalable, user-focused applications that help businesses achieve their goals and enhance digital experiences.",
+  keywords: ["Full-Stack Web Developer", "Software Developer Portfolio", "React and Next.js Developer", "Scalable Web Applications", "Professional Web Development"]
 };
 
 export default function RootLayout({
@@ -22,10 +24,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const cookieStore = cookies()
+  const geoData = cookieStore.get("geo-data");
+  console.log(geoData)
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={cn("flex antialiased h-screen overflow-hidden bg-gray-100", inter.className)}
+        className={cn("flex antialiased h-screen overflow-hidden bg-gray-100 dark:bg-zinc-900", inter.className)}
       >
       <ThemeProvider
         attribute="class"
@@ -33,11 +39,13 @@ export default function RootLayout({
         enableSystem
         disableTransitionOnChange
         >
-          <Sidebar />
-          <div className="lg:pl-2 lg:pt-2 bg-gray-100 flex-1 overflow-auto">
-            <div className="flex-1 bg-white min-h-screen lg:rounded-tl-xl border border-transparent lg:border-neutral-200 overflow-y-auto">
-              {children}
-              {/* <Footer /> */}
+          <div className="flex-1 flex">
+            <Sidebar geoData={geoData} />
+            <div className="lg:pl-2 lg:pt-2 bg-secondary dark:bg-zinc-900 flex-1 overflow-auto">
+              <div className="flex-1 bg-background min-h-screen lg:rounded-tl-xl border-2 border-transparent lg:border-neutral-200 overflow-y-auto dark:lg:border-neutral-700">
+                {children}
+                <Footer />
+              </div>
             </div>
           </div>
           <Toaster />

@@ -8,7 +8,7 @@ export const Paragraph = ({ children, className }: {
   className?: string;
 }) => {
   return (
-    <p className={cn("text-sm lg:text-base font-normal text-zinc-500",
+    <p className={cn("text-sm lg:text-base font-normal text-zinc-500 dark:text-zinc-200",
     className)}>
       {children}
     </p>

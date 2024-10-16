@@ -16,7 +16,7 @@ export default function Home() {
         applications.
       </Paragraph>
       <Paragraph className="max-w-xl mt-4">
-      I specialize in{" "}<Highlight>TypeScript</Highlight>,{" "}<Highlight>Next.js</Highlight>,{" "}<Highlight>React</Highlight>,{" "}<Highlight>Node.js</Highlight>{" "}and working with both{" "}<Highlight>SQL and NoSQL databases</Highlight>{" "}to build products and 
+      I specialize in{" "}<Highlight>TypeScript</Highlight>,{" "}<Highlight>Next.js</Highlight>,{" "}<Highlight>React</Highlight>,{" "}<Highlight>Node.js</Highlight>{" "}and working with both{" "}<Highlight>SQL</Highlight>{" "}and{" "}<Highlight>NoSQL</Highlight>{" "}databasesto build products and 
       web apps that make a meaningful impact. I enjoy collaborating with businesses to bring their ideas to life, whether it&apos;s 
       developing new software from the ground up or enhancing existing systems with new features.
       </Paragraph>

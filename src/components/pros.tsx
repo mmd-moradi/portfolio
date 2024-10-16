@@ -12,7 +12,7 @@ export function Prose({
     <div
       className={cn(
         className,
-        "prose prose-sm prose-blue max-w-none prose-p:text-zinc-700 prose-headings:text-primary"
+        "prose prose-sm prose-blue max-w-none prose-p:text-zinc-700 dark:prose-strong:text-emerald-500 dark:prose-li:text-emerald-500 dark:prose-p:text-zinc-200 prose-headings:text-primary"
       )}
     >
       {children}

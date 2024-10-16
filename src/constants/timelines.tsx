@@ -37,7 +37,8 @@ export const timelineData: TimeLineType[] = [
       "Next.js", 
       "sanity.io", 
       "stitches", 
-      "framer-motion"
+      "framer-motion",
+      "figma"
     ],
     date: "01/06/2023 - 01/11/2023",
     description: "Human resources company",
@@ -55,7 +56,7 @@ export const timelineData: TimeLineType[] = [
       "JavaScript", 
       "Python", 
       "Bash", 
-      "RESTful API", 
+      "Rest API", 
       "Postman"
     ],
     date: "16/10/2022 - 25/04/2023",

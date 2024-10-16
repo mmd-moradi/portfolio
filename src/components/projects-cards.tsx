@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Heading } from "./ui/heading"
 import { Paragraph } from "./paragraph"
+import { TechBadge } from "./tech-badge";
 
 
 export const ProjectsCards = () => {
@@ -27,7 +28,7 @@ export const ProjectsCards = () => {
             <Link
               href={project.slug ? `/projects/${project.slug}` : project.href}
               key={project.href}
-              className="group space-y-4 md:space-y-0 md:space-x-4 flex flex-col md:flex-row hover:bg-gray-50 rounded-2xl transition duration-200 pt-4"
+              className="group space-y-4 md:space-y-0 md:space-x-4 flex flex-col md:flex-row hover:bg-gray-50 dark:hover:bg-zinc-900 rounded-2xl transition duration-200 pt-4"
             >
               <Image
                 src={project.thumbnail}
@@ -40,7 +41,7 @@ export const ProjectsCards = () => {
                 <div>
                   <Heading
                     as="h4"
-                    className="font-black text-lg md:text-lg lg:text-lg "
+                    className="font-bold text-lg md:text-lg lg:text-lg text-primary"
                   >
                     {project.title}
                   </Heading>
@@ -50,12 +51,11 @@ export const ProjectsCards = () => {
                 </div>
                 <div className="flex gap-2 md:mb-2 mt-4 flex-wrap">
                   {project.stack?.map((stack: string) => (
-                    <span
-                      key={stack}
-                      className="text-xs md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-zinc-500"
+                    <TechBadge
+                    key={stack}
                     >
                       {stack}
-                    </span>
+                    </TechBadge>
                   ))}
                 </div>
               </div>

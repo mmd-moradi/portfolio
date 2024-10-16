@@ -1,5 +1,10 @@
 import { cn } from "@/lib/utils";
+import localFont from "next/font/local";
 
+const CalSans = localFont({
+  src: [{ path: "../../../fonts/CalSans-SemiBold.woff2" }],
+  display: "swap",
+});
 
 export const Heading = ({
   children,
@@ -12,7 +17,7 @@ export const Heading = ({
 }) => {
   return (
     <Tag
-      className={cn("bg-gradient-to-r from-primary to-text-zinc-500 text-transparent bg-clip-text text-base md:text-xl lg:text-4xl font-semibold",
+      className={cn(CalSans.className, "bg-gradient-to-r from-primary to-text-zinc-700 to-zinc-300 text-transparent bg-clip-text text-lg md:text-xl lg:text-4xl font-semibold",
         className
       )}
     >

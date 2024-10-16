@@ -22,7 +22,7 @@ export default async function Blogs() {
     <Container>
       <span className="text-4xl">📝</span>
       <Heading className="mb-10 mt-2 font-black">
-        Writing on Tech, Marketing, and Entrepreneurship
+        Writing on Tech, Marketing and Entrepreneurship
       </Heading>
       <Paragraph>
       Sharing insights on{" "}<Highlight>tech</Highlight>,{" "}<Highlight>marketing</Highlight>{" "}and {" "}<Highlight>entrepreneurship</Highlight>{" "}as a way to give back,

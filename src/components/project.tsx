@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Paragraph } from "./paragraph";
 import Link from "next/link";
 import { ArrowRightIcon } from "lucide-react";
+import { TechBadge } from "./tech-badge";
 
 
 
@@ -48,21 +49,20 @@ export const SingleProject = ({project}:{project: ProjectType}) => {
               alt="project thumbnail"
               height="1000"
               width="1000"
-              className="h-14 w-16 md:h-40 md:w-60 object-cover object-top mr-4 mb-r border rounded-lg border-neutral-100"
+              className="h-14 w-16 md:h-40 md:w-60 object-cover object-top mr-4 mb-4 border rounded-lg border-neutral-100"
             />
           </button>
         ))}
       </div>
-      <div className="flex justify-between items-center flex-col mt-20 lg:items-start">
+      <div className="flex items-start flex-col mt-20 lg:items-start">
         <h1 className="text-primary font-black text-4xl mb-2 pb-1"> {project.title}</h1>
         <div className="flex gap-2 md:mb-1 mt-2 md:mt-0 flex-wrap">
           {project.stack?.map((stack: string) => (
-            <span
+            <TechBadge
               key={stack}
-              className="text-xs md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-zinc-500"
             >
               {stack}
-            </span>
+            </TechBadge>
           ))}
         </div>
       </div>
@@ -76,10 +76,10 @@ export const SingleProject = ({project}:{project: ProjectType}) => {
       <Link
         href={project.href}
         target="__blank"
-        className="inline-flex mt-4 items-center gap-1 group/button rounded-full hover:scale-105 focus:outline-none transition ring-offset-slate-900 bg-slate-800 text-white shadow-lg shadow-black/20 sm:backdrop-blur-sm group-hover/button:bg-slate-50/15 group-hover/button:scale-105 focus-visible:ring-1 focus-visible:ring-offset-2 text-sm font-medium px-4 py-2"
+        className="inline-flex mt-4 items-center gap-1 group/button rounded-full hover:scale-105 focus:outline-none transition ring-offset-primary bg-primary text-primary-foreground shadow-lg shadow-black/20 dark:shadow-white/5 sm:backdrop-blur-sm text-sm font-medium px-4 py-2"
       >
         Live Preview
-        <ArrowRightIcon className="ml-2 w-4 h-4 text-white" />
+        <ArrowRightIcon className="ml-2 w-4 h-4 text-primary-foreground" />
       </Link>
     </div>
   )

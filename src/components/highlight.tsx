@@ -8,7 +8,7 @@ export const Highlight = ({ children, className }: {
   className?: string;
 }) => {
   return (
-    <span className={cn("bg-neutral-100 px-1 py-0.5",
+    <span className={cn("bg-neutral-100 dark:bg-neutral-700 rounded-[2px] px-1 py-0.5",
       className
     )}>
       {children}

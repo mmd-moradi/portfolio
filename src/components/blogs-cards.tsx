@@ -7,6 +7,7 @@ import { Heading } from "./ui/heading";
 import { Paragraph } from "./paragraph";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { TagBadge } from "./tag-badge";
 
 export const BlogsCards = ({ blogs }: { blogs: BlogDataType[] }) => {
   const [hovered, setHovered] = useState<string | null>(null);
@@ -51,7 +52,7 @@ export const BlogsCards = ({ blogs }: { blogs: BlogDataType[] }) => {
                     scaleX: 0.95,
                     scaleY: 0.95,
                   }}
-                  className="absolute z-0 pointer-events-none bg-gray-50 inset-0 h-full w-full rounded-md "
+                  className="absolute z-0 pointer-events-none bg-gray-50 dark:bg-zinc-900 inset-0 h-full w-full rounded-md "
                 />
               )}
             </AnimatePresence>
@@ -65,7 +66,7 @@ export const BlogsCards = ({ blogs }: { blogs: BlogDataType[] }) => {
                 className="rounded-md object-cover h-40 w-60"
               />
               <div className="flex flex-col col-span-3">
-                <Heading className="text-lg md:text-lg lg:text-lg">
+                <Heading className="text-lg md:text-lg lg:text-lg font-semibold">
                   {blog.title}
                 </Heading>
                 <Paragraph className="text-sm md:text-sm lg:text-sm mt-2">
@@ -73,12 +74,11 @@ export const BlogsCards = ({ blogs }: { blogs: BlogDataType[] }) => {
                 </Paragraph>
                 <div className="flex space-x-2 flex-wrap mt-4">
                   {blog.tags?.map((tag, index) => (
-                    <span
+                    <TagBadge
                       key={`tag-${blog.slug}-${index}`}
-                      className="text-xs px-1 py-0.5 text-zinc-500 border border-neutral-200 bg-white rounded-md"
                     >
                       {tag}
-                    </span>
+                    </TagBadge>
                   ))}
                 </div>
               </div>

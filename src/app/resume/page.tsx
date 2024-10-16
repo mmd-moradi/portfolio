@@ -1,6 +1,5 @@
 import { Container } from "@/components/container";
 import { Paragraph } from "@/components/paragraph";
-import { Timeline } from "@/components/timeline";
 import { Heading } from "@/components/ui/heading";
 import { WorkHistory } from "@/components/work-history";
 

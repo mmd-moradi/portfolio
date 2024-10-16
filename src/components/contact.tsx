@@ -50,7 +50,7 @@ export const ContactForm = () => {
   return (
     <div className="py-10">
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="grid grid-cols-2 gap-x-2 gap-y-4">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col md:grid md:grid-cols-2 gap-x-2 gap-y-4">
           <FormField
             control={form.control}
             name="name"
@@ -81,7 +81,7 @@ export const ContactForm = () => {
             control={form.control}
             name="message"
             render={({ field }) => (
-              <FormItem className="col-span-2">
+              <FormItem className="md:col-span-2">
                 <FormLabel>Message</FormLabel>
                 <FormControl>
                   <Textarea
@@ -100,7 +100,7 @@ export const ContactForm = () => {
             onClick={() => router.push("https://wa.me/5561981849932?text=Hi%20Mohammad%2C%20I%20want%20to%20work%20on%20a%20project%20with%20you%21")}
             variant={"outline"}
             type="button"
-            className="hover:bg-green-400 hover:border-0 ease-linear hover:scale-105 hover:shadow-md hover:backdrop-blur-sm transition-all duration-200 "
+            className="hover:bg-green-400 dark:hover:bg-emerald-500 hover:border-0 ease-linear hover:scale-105 hover:shadow-md hover:backdrop-blur-sm transition-all duration-200 "
           >
             <FaWhatsapp className="w-4 h-4 mr-2" />
             <span>Chat on WhatsApp</span>

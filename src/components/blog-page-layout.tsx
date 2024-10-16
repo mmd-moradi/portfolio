@@ -29,7 +29,7 @@ export const BlogPageLayout = ({
         <article>
           <header className="flex flex-col">
             <Button onClick={() => router.push("/blogs")} variant={"outline"} className="group rounded-full h-10 w-10 px-0 py-0 shadow-md shadow-zinc-900/5 mb-4">
-              <ArrowLeft className="w-4 h-4 text-zinc-500 group-hover:text-zinc-700" />
+              <ArrowLeft className="w-4 h-4 text-zinc-500 group-hover:text-zinc-700 dark:text-secondary-foreground dark:group-hover:text-primary/80" />
             </Button>
             <Heading className="py-4">{meta.title}</Heading>
             <div className="flex items-center">
