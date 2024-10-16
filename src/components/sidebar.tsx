@@ -93,7 +93,7 @@ const SidebarHeader = ({geoData}: SidebarProps) => {
               className="w-4 h-4 object-contain rounded-sm"
             />
         )}
-         <span className="text-xs font-medium text-foreground">{geoData?.value.country}{geoData?.value.city}</span>
+         {/* {geoData?.value && <span className="text-xs font-medium text-foreground">{geoData?.value.country}{geoData?.value.city}</span>} */}
         </div>
       </div>
     </div>
