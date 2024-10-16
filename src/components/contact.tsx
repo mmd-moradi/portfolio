@@ -39,7 +39,6 @@ export const ContactForm = () => {
   })
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
-    console.log(data)
     const response = await axios.post("/api/contact", data)
     if (response.status === 200) {
       form.reset()

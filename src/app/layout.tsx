@@ -27,7 +27,6 @@ export default function RootLayout({
 
   const cookieStore = cookies()
   const geoData = cookieStore.get("geo-data");
-  console.log(geoData)
   return (
     <html lang="en" suppressHydrationWarning>
       <body

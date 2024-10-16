@@ -21,7 +21,6 @@ type SidebarProps = {
 export const Sidebar = ({geoData}: SidebarProps) => {
   const [open, setOpen] = useState(isMobile() ? false : true);
   const router = useRouter();
-  console.log(geoData)
   return (
     <>
       <AnimatePresence>
@@ -32,13 +31,13 @@ export const Sidebar = ({geoData}: SidebarProps) => {
             animate={{ x: 0}}
             transition={{ duration: 0.2, ease: "linear"}}
             exit={{ x: -300}}
-            className="left-0 px-6 py-10 z-[100] h-screen max-w-[16rem] bg-secondary fixed dark:bg-zinc-900 lg:w-fit flex flex-col justify-between lg:relative"
+            className="left-0 px-6 py-12 md:py-10 z-[100] h-screen max-w-[16rem] bg-secondary fixed dark:bg-zinc-900 lg:w-fit flex flex-col justify-between lg:relative"
           >
             <ScrollArea className="flex-1 pr-4">
               <SidebarHeader geoData={geoData} />
               <Navigation setOpen={setOpen} />
             </ScrollArea>
-            <Button onClick={() => router.push("/resume")} className="rounded-full shadow-md w-[180px] mb-2">
+            <Button onClick={() => router.push("/resume")} className="rounded-full shadow-md w-[180px] z[110] mb-4">
               <span className="text-sm font-semibold text-primary-foreground">Read resume</span>
               <ChevronRightIcon className="ml-auto w-4 h-4 text-primary-foreground" />
             </Button>
@@ -46,8 +45,8 @@ export const Sidebar = ({geoData}: SidebarProps) => {
         )}
       </AnimatePresence>
       <Button onClick={() => setOpen(!open)}
-        variant={"outline"}
-        className="fixed bottom-40 right-4 backdrop-blur-sm shadow-sm z-50 lg:hidden rounded-full"
+        variant={"secondary"}
+        className="fixed bottom-40 right-4 w-12 h-12 backdrop-blur-sm shadow-sm z-50 lg:hidden rounded-full"
         >
           {open ? (<PanelLeftClose className="h-5 w-5" />):(<PanelLeftOpen className="h-5 w-5" />)}
       </Button>
@@ -83,7 +82,7 @@ const SidebarHeader = ({geoData}: SidebarProps) => {
         <span className="text-xs text-primary">
           Latest Visit:
         </span>
-        <div className="rounded-full w-fit bg-white border border-gray-200 dark:border-zinc-800 dark:bg-zinc-800 shadow-md backdrop-blur-sm px-4 py-1 flex items-center gap-2">
+        <div className="rounded-full w-fit bg-white/80 border border-gray-200 dark:border-zinc-800 dark:bg-zinc-800 shadow-md backdrop-blur-sm px-4 py-1 flex items-center gap-2">
         {flag &&(
             <Image 
               src={flag}
@@ -93,7 +92,7 @@ const SidebarHeader = ({geoData}: SidebarProps) => {
               className="w-4 h-4 object-contain rounded-sm"
             />
         )}
-         {/* {geoData?.value && <span className="text-xs font-medium text-foreground">{geoData?.value.country}{geoData?.value.city}</span>} */}
+         {parsedGeo && <span className="text-xs font-medium text-foreground">{parsedGeo.country}, {parsedGeo.city}</span>}
         </div>
       </div>
     </div>

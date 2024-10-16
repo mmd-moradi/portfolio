@@ -27,7 +27,7 @@ const Footer = () => {
   }, [])
   
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8 border-t md:px-0 border-neutral-200 dark:border-secondary flex items-center justify-between">
+    <div className="max-w-4xl mx-auto px-4 py-16 md:py-8 border-t md:px-0 border-neutral-200 dark:border-secondary flex items-center justify-between">
       <div>
         <span className="text-sm font-medium text-zinc-500 dark:text-zinc-200">
           Made with ❤️ - {new Date().getFullYear()}
