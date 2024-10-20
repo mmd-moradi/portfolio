@@ -1,0 +1,307 @@
+{
+  "home": {
+    "greeting": "👋",
+    "introductionHeading": "Olá! Sou o Mohammad",
+    "introductionParagraph": "Sou um desenvolvedor full-stack com uma {highlight}mentalidade empreendedora{highlight}, apaixonado por ajudar negócios e empresas a construir e melhorar suas soluções de software. Com {highlight}3 anos de experiência{highlight}, foco em criar aplicações web escaláveis, otimizadas e visualmente atraentes.",
+    "specializationParagraph": "Minha especialização é em {highlight}TypeScript{highlight}, {highlight}Next.js{highlight}, {highlight}React{highlight}, {highlight}Node.js{highlight} e trabalho com bancos de dados {highlight}SQL{highlight} e {highlight}NoSQL{highlight} para desenvolver produtos e aplicativos web que causam um impacto significativo. Gosto de colaborar com empresas para dar vida às suas ideias, seja desenvolvendo novo software do zero ou aprimorando sistemas existentes com novos recursos.",
+    "projectsHeading": "Nos quais tenho trabalhado",
+    "projects": [
+      {
+        "href": "https://libber.co/",
+        "title": "Libber",
+        "description": "Contribuí o desenvolvimento de uma startup B2B de contratação temporária, criando a página de apresentação, software interno e aplicativo móvel, enquanto liderava o design de recursos e automação.",
+        "thumbnail": "/images/libber-thumb1.png",
+        "images": ["/images/libber-thumb1.png", "/images/libber-thumb2.png", "/images/libber-3.png", "/images/libber-4.png"],
+        "stack": ["TypeScript", "Next.js", "React", "Tailwind CSS", "Node.js", "Go", "PostgreSQL", "Drizzle ORM", "Docker", "RabbitMQ", "AWS"],
+        "slug": "libber"
+      },
+      {
+        "href": "https://di-art.vercel.app/",
+        "title": "DiArt",
+        "description": "Desenvolvi um marketplace de arte digital amigável com recursos como autenticação, páginas de produtos, funcionalidade de upload, adicionar ao carrinho, processamento seguro de pagamentos e otimização para SEO.",
+        "thumbnail": "/images/diart2.png",
+        "images": ["/images/diart2.png"],
+        "stack": ["TypeScript", "Next.js", "React", "Tailwind CSS", "MongoDB", "Mongoose", "Stripe", "NextAuth"],
+        "slug": "diart"
+      },
+      {
+        "href": "https://github.com/mmd-moradi/swiftEats",
+        "title": "SwiftEats",
+        "description": "Construí um aplicativo de comida em React Native com opções categorizadas, restaurantes próximos, menus, carrinho, integração com mapas e rastreamento de pedidos.",
+        "thumbnail": "/images/swifteat.png",
+        "images": ["/images/swifteat.png"],
+        "stack": ["React Native", "Expo", "TailwindCSS (NativeWind)", "React Native Navigation", "Redux", "Sanity", "React Native Maps"],
+        "slug": "swifteats"
+      },
+      {
+        "href": "https://spot.com.br/",
+        "title": "Spot",
+        "description": "Como desenvolvedor Frontend remoto na Spot, melhorei a UI/UX da plataforma web e SEO enquanto refinava componentes com Next.js e colaborava em atualizações.",
+        "thumbnail": "/images/spot-1.png",
+        "images": ["/images/spot-1.png", "/images/spot-2.png"],
+        "stack": ["TypeScript", "Next.js", "Sanity.io", "Stitches", "Framer Motion", "Vercel"],
+        "slug": "spot"
+      },
+      {
+        "href": "https://hackerone.com/",
+        "title": "Hackerone",
+        "description": "Trabalhei como Analista de Aplicações Web, utilizando JavaScript, Python e Rest API para testar e garantir a segurança de aplicações web.",
+        "thumbnail": "/images/hackerone-1.png",
+        "images": ["/images/hackerone-1.png", "/images/hackerone-2.png"],
+        "stack": ["JavaScript", "Python", "Bash", "Rest API", "Postman"],
+        "slug": "hackerone"
+      }
+    ],
+    "techStacks": {
+      "title": "Tecnologias",
+      "stacks": [
+        {
+          "title": "TypeScript",
+          "className": "h-12 w-12",
+          "src": "/stacks/typescript.svg"
+        },
+        {
+          "title": "Next.js",
+          "className": "h-12 w-12",
+          "src": "/stacks/nextjs2.svg"
+        },
+        {
+          "title": "React",
+          "className": "h-12 w-12",
+          "src": "/stacks/reactjs.svg"
+        },
+        {
+          "title": "Node.js",
+          "className": "h-12 w-12",
+          "src": "/stacks/nodejs.svg"
+        },
+        {
+          "title": "Tailwind CSS",
+          "className": "h-12 w-12",
+          "src": "/stacks/tailwindcss.svg"
+        },
+        {
+          "title": "Prisma",
+          "className": "h-12 w-12",
+          "src": "/stacks/prisma.svg"
+        },
+        {
+          "title": "Drizzle",
+          "className": "h-12 w-12",
+          "src": "/stacks/drizzle.png"
+        },
+        {
+          "title": "PostgreSQL",
+          "className": "h-12 w-12",
+          "src": "/stacks/postgresql.svg"
+        },
+        {
+          "title": "MongoDB",
+          "className": "h-12 w-12",
+          "src": "/stacks/mongodb.svg"
+        },
+        {
+          "title": "Docker",
+          "className": "h-12 w-12",
+          "src": "/stacks/docker.svg"
+        },
+        {
+          "title": "Vercel",
+          "className": "h-12 w-12",
+          "src": "/stacks/vercel.png"
+        }
+      ]
+    }
+  },
+  "sidebar": {
+    "heading": {
+      "name": "Mohammad Moradi",
+      "role": "Dev Fullstack",
+      "avatarSrc": "/images/mmd-pic-avatar.jpeg",
+      "latestVisit": "Última Visita:"
+    },
+    "navlinks": [
+      {
+        "href": "/pt",
+        "label": "Início",
+        "icon": "TerminalSquare"
+      },
+      {
+        "href": "/pt/about",
+        "label": "Sobre",
+        "icon": "Bot"
+      },
+      {
+        "href": "/pt/projects",
+        "label": "Projetos",
+        "icon": "Code2"
+      },
+      {
+        "href": "/pt/blogs",
+        "label": "Blogs",
+        "icon": "Book"
+      },
+      {
+        "href": "/pt/contact",
+        "label": "Contato",
+        "icon": "Mail"
+      }
+    ],
+    "socials": [
+      {
+        "href": "https://x.com/mmd_mi_",
+        "label": "Twitter",
+        "icon": "FaSquareXTwitter"
+      },
+      {
+        "href": "https://www.linkedin.com/in/mmdmi/",
+        "label": "LinkedIn",
+        "icon": "LinkedInLogoIcon"
+      },
+      {
+        "href": "https://www.instagram.com/mmd__mi_/",
+        "label": "Instagram",
+        "icon": "InstagramLogoIcon"
+      }
+    ],
+    "resumeButton": {
+      "label": "Ler currículo"
+    }
+  },
+  "about": {
+    "emoji": "🌟",
+    "heading": "Sobre Mim",
+    "paragraphs": [
+      {
+        "id": "intro",
+        "content": "Meu nome é Mohammad Moradi, sou um desenvolvedor full-stack do 🇮🇷 Irã, atualmente baseado no 🇧🇷 Brasil. Com mais de 3 anos de experiência, construo soluções de software escaláveis e eficientes e gosto de colaborar com equipes diversas para criar aplicações web impactantes."
+      },
+      {
+        "id": "passion",
+        "content": "Sou apaixonado por empreendedorismo e desenvolvimento de software, e adoro trabalhar com pessoas que pensam da mesma forma para inovar e resolver problemas. Eu me destaco em transformar ideias em realidade, desde o design de interfaces até a construção de sistemas backend otimizados."
+      },
+      {
+        "id": "goal",
+        "content": "Meu objetivo é me tornar um desenvolvedor de alto nível enquanto ajudo empresas a transformar suas ideias de software em realidade📈. Também me esforço para retribuir à minha família ❤️, apoiando-os enquanto cresço pessoal e profissionalmente."
+      },
+      {
+        "id": "thanks",
+        "content": "Obrigado por estar aqui! 🙏 Agradeço seu interesse na minha jornada e mal posso esperar para embarcar nesta aventura com você. Vamos explorar as possibilidades juntos!"
+      }
+    ]
+  },
+  "projects": {
+    "emoji": "🚀",
+    "heading": "Minhas Criações em Ação"
+  },
+  "blogs": {
+    "emoji": "📝",
+    "heading": "Escrevendo sobre Tecnologia, Marketing e Empreendedorismo",
+    "description": "Compartilhando insights sobre {highlight}tecnologia{highlight}, {highlight}marketing{highlight} e {highlight}empreendedorismo{highlight} como uma forma de retribuir, inspirado por tudo que aprendi gratuitamente com os blogs de outras pessoas. Espero que minhas postagens ajudem você a crescer e inovar.",
+    "blogsCards": [
+      {
+        "title": "Lições de Clean Code",
+        "summary": "Minhas lições do Clean Code de Robert C. Martin, focando em escrever software mais simples e eficiente.",
+        "publishedAt": "2024-09-10T00:00:00.000Z",
+        "slug": "clean-code",
+        "tags": ["Engenharia de Software", "Resenha de Livro", "Clean Code"],
+        "thumbnail": "/images/clean-code-thumb.jpg"
+      }
+    ]
+  },
+  "contact": {
+    "emoji": "✉️",
+    "heading": "Entre em Contato",
+    "description": "Fique à vontade para entrar em contato se quiser se conectar, colaborar ou discutir novos projetos. Estou sempre aberto a explorar ideias inovadoras ou oportunidades de negócios. Vamos construir algo incrível juntos!",
+    "fields": {
+      "nameField": {
+        "name": "Nome",
+        "placeholder": "Seu nome"
+      },
+      "emailField": {
+        "name": "Email",
+        "placeholder": "Seu endereço de email"
+      },
+      "messageField": {
+        "name": "Mensagem",
+        "placeholder": "Sua mensagem"
+      }
+    },
+    "submitButton": "Enviar",
+    "whatsAppTitle": "Conversar no WhatsApp"
+  },
+  "resume": {
+    "emoji": "💼",
+    "heading": "Minha Jornada e Experiência",
+    "description": "Uma visão geral da minha experiência profissional e habilidades, destacando os papéis que assumi e os projetos em que contribuí.",
+    "timelines": [
+      {
+        "company": "Libber",
+        "role": "Desenvolvedor Fullstack",
+        "stacks": [
+          "TypeScript", 
+          "Next.js", 
+          "React", 
+          "PostgreSQL", 
+          "Drizzle ORM", 
+          "TailwindCSS", 
+          "Node.js", 
+          "Go", 
+          "AWS", 
+          "RabbitMQ", 
+          "Redis", 
+          "Prometheus", 
+          "N8N (alternativa ao Zapier)", 
+          "Grafana"
+        ],
+        "date": "05/11/2023 - Presente",
+        "description": "Startup de contratação temporária",
+        "location": "Brasil, Distrito Federal - Híbrido",
+        "responsibilities": [
+          "Contribuí para a construção e design de software interno e sistemas de automação para gerenciar operações, reduzindo tarefas manuais em 40% e melhorando a velocidade operacional em 60%, o que foi crucial para a eficiência do negócio.",
+          "Desenvolvi e projetei a página de aterrissagem juntamente com um formulário de lead em múltiplas etapas para otimizar a aquisição de usuários.",
+          "Criei e projetei o aplicativo móvel para gerentes, facilitando a gestão de funcionários temporários, incluindo wireframing, prototipagem e ideação de recursos voltados para o mercado B2B."
+        ]
+      },
+      {
+        "company": "Spot",
+        "role": "Desenvolvedor Frontend",
+        "stacks": [
+          "TypeScript", 
+          "Next.js", 
+          "sanity.io", 
+          "stitches", 
+          "framer-motion",
+          "figma"
+        ],
+        "date": "01/06/2023 - 01/11/2023",
+        "description": "Empresa de recursos humanos",
+        "location": "Brasil, Distrito Federal - Remoto",
+        "responsibilities": [
+          "Melhorei a página de aterrissagem existente, aprimorando o design UI/UX e implementando novos recursos.",
+          "Implementei melhorias de SEO para aumentar a visibilidade e o tráfego orgânico.",
+          "Colaborei com a equipe no design UI/UX para criar uma experiência de usuário consistente e envolvente em toda a plataforma."
+        ]
+      },
+      {
+        "company": "Hackerone",
+        "role": "Analista de Aplicativos Web",
+        "stacks": [
+          "JavaScript", 
+          "Python", 
+          "Bash", 
+          "Rest API", 
+          "Postman"
+        ],
+        "date": "16/10/2022 - 25/04/2023",
+        "description": "Teste e análise de aplicativos web freelance",
+        "location": "Brasil, Distrito Federal",
+        "responsibilities": [
+          "Realizei testes de aplicativos web e análises de segurança para empresas como Ford, Sony Corporation, Xfinity e Bungie, ajudando a garantir a segurança de suas aplicações.",
+          "Identifiquei bugs e vulnerabilidades analisando e testando o código-fonte (JavaScript), funcionalidades e APIs de aplicativos web.",
+          "Utilizei ferramentas como Postman para testes de API e realizei testes manuais e automatizados para garantir a integridade da aplicação."
+        ]
+      }
+    ]
+  }
+}

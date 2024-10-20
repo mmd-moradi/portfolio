@@ -19,7 +19,17 @@ import { useRouter } from "next/navigation";
 import axios from "axios"
 import { toast } from "sonner";
 
-export const ContactForm = () => {
+type Props = {
+  fields: {
+    nameField: {name:string; placeholder: string};
+    emailField: {name:string; placeholder: string};
+    messageField: {name:string; placeholder: string};
+  },
+  submitButtonTitle: string;
+  whatsAppTitle: string;
+}
+
+export const ContactForm = ({fields, whatsAppTitle, submitButtonTitle}: Props) => {
   const router = useRouter()
   const formSchema = useMemo(() => (
     z.object({
@@ -55,9 +65,9 @@ export const ContactForm = () => {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel>{fields.nameField.name}</FormLabel>
                 <FormControl>
-                  <Input {...field} placeholder="Your name" />
+                  <Input {...field} placeholder={fields.nameField.placeholder} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -68,9 +78,9 @@ export const ContactForm = () => {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel>{fields.emailField.name}</FormLabel>
                 <FormControl>
-                  <Input {...field} placeholder="Your email address" />
+                  <Input {...field} placeholder={fields.emailField.placeholder} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -81,10 +91,10 @@ export const ContactForm = () => {
             name="message"
             render={({ field }) => (
               <FormItem className="md:col-span-2">
-                <FormLabel>Message</FormLabel>
+                <FormLabel>{fields.messageField.name}</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="Your message"
+                    placeholder={fields.messageField.placeholder}
                     className="min-h-20"
                     {...field}
                   />
@@ -94,7 +104,7 @@ export const ContactForm = () => {
             )}
           />
           <div className="flex justify-between col-span-2">
-          <Button className="" type="submit" disabled={form.formState.isSubmitting}>Submit</Button>
+          <Button className="" type="submit" disabled={form.formState.isSubmitting}>{submitButtonTitle}</Button>
           <Button
             onClick={() => router.push("https://wa.me/5561981849932?text=Hi%20Mohammad%2C%20I%20want%20to%20work%20on%20a%20project%20with%20you%21")}
             variant={"outline"}
@@ -102,7 +112,7 @@ export const ContactForm = () => {
             className="hover:bg-green-400 dark:hover:bg-emerald-500 hover:border-0 ease-linear hover:scale-105 hover:shadow-md hover:backdrop-blur-sm transition-all duration-200 "
           >
             <FaWhatsapp className="w-4 h-4 mr-2" />
-            <span>Chat on WhatsApp</span>
+            <span>{whatsAppTitle}</span>
           </Button>
           </div>
         </form>

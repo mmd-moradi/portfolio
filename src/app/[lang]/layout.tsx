@@ -7,6 +7,9 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/sonner"
 import Footer from "@/components/footer";
 import { cookies } from "next/headers";
+import { i18n, Locale } from "@/i18n-config";
+import { getDictionary } from "@/get-dictionary";
+import { SidebarType } from "@/types/sidebar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,16 +22,23 @@ export const metadata: Metadata = {
   keywords: ["Full-Stack Web Developer", "Software Developer Portfolio", "React and Next.js Developer", "Scalable Web Applications", "Professional Web Development"]
 };
 
-export default function RootLayout({
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
+
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { lang: Locale }
 }>) {
 
   const cookieStore = cookies()
   const geoData = cookieStore.get("geo-data");
+  const dictionary = await getDictionary(params.lang);
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={params.lang} suppressHydrationWarning>
       <body
         className={cn("flex antialiased h-screen overflow-hidden bg-gray-100 dark:bg-zinc-900", inter.className)}
       >
@@ -39,11 +49,11 @@ export default function RootLayout({
         disableTransitionOnChange
         >
           <div className="flex-1 flex">
-            <Sidebar geoData={geoData} />
+            <Sidebar sidebarData={dictionary.sidebar as SidebarType} geoData={geoData} />
             <div className="lg:pl-2 lg:pt-2 bg-secondary dark:bg-zinc-900 flex-1 overflow-auto">
               <div className="flex-1 bg-background min-h-screen lg:rounded-tl-xl border-2 border-transparent lg:border-neutral-200 overflow-y-auto dark:lg:border-neutral-700">
                 {children}
-                <Footer />
+                <Footer locale={params.lang} />
               </div>
             </div>
           </div>

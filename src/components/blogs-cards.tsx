@@ -8,8 +8,9 @@ import { Paragraph } from "./paragraph";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { TagBadge } from "./tag-badge";
+import { Locale } from "@/i18n-config";
 
-export const BlogsCards = ({ blogs }: { blogs: BlogDataType[] }) => {
+export const BlogsCards = ({ blogs, locale }: { blogs: BlogDataType[]; locale: Locale }) => {
   const [hovered, setHovered] = useState<string | null>(null);
   return (
     <div className="max-w-5xl mx-auto my-10">
@@ -28,7 +29,7 @@ export const BlogsCards = ({ blogs }: { blogs: BlogDataType[] }) => {
         >
           <Link
             key={`blog-${blog.title}`}
-            href={`/blogs/${blog.slug}`}
+            href={`/${locale}/blogs/${blog.slug}`}
             className="relative my-10 block"
             onMouseEnter={() => setHovered(blog.slug)}
             onMouseLeave={() => setHovered(null)}

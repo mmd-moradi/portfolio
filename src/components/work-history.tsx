@@ -1,13 +1,16 @@
 "use client";
 
-import { timelineData } from "@/constants/timelines";
 import { Paragraph } from "./paragraph";
 import { Heading } from "./ui/heading";
 import { CheckCircle2 } from "lucide-react";
+import { TimeLineType } from "@/types/timelines";
 
 
+type Props = {
+  timelineData: TimeLineType[]
+}
 
-export const WorkHistory = () => {
+export const WorkHistory = ({timelineData}: Props) => {
   return (
     <div>
       {timelineData.map((timeline, index) => (

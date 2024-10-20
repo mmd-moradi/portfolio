@@ -1,5 +1,4 @@
 "use client";
-import { techStacksData } from "@/constants/tech-stacks"
 import { Heading } from "./ui/heading"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
@@ -9,15 +8,16 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import { TechStacksType} from "@/types/tech-stacks";
 
-export const TechStacks = () => {
+export const TechStacks = ({ techStacks }: {techStacks: TechStacksType}) => {
   return (
     <div>
       <Heading as="h2" className="text-lg md:text-lg lg:text-lg mt-20 mb-4 font-black">
-        Tech Stacks
+        {techStacks.title}
       </Heading>
       <div className="flex items-center gap-4 flex-wrap">
-        {techStacksData.map((stack) => (
+        {techStacks.stacks.map((stack) => (
           <TooltipProvider key={stack.title}>
             <Tooltip>
               <TooltipTrigger>

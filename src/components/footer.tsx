@@ -14,7 +14,17 @@ import {
 } from "@/components/ui/select"
 import { useEffect, useState } from "react";
 import { Earth } from "lucide-react";
-const Footer = () => {
+import { usePathname, useRouter } from "next/navigation";
+import { Locale } from "@/i18n-config";
+const Footer = ({locale}: {locale: Locale}) => {
+  const pathname = usePathname();
+  const router = useRouter();
+  const redirectedPathname = (locale: Locale) => {
+    if (!pathname) return "/";
+    const segments = pathname.split("/");
+    segments[1] = locale;
+    return segments.join("/");
+  };
   const {setTheme} = useTheme()
   const [theme, setThemeState] = useState<string>("")
   const updateTheme = (theme: string) => {
@@ -27,7 +37,7 @@ const Footer = () => {
   }, [])
   
   return (
-    <div className="max-w-4xl mx-auto px-4 py-16 md:py-8 border-t md:px-0 border-neutral-200 dark:border-secondary flex items-center justify-between">
+    <div className="max-w-4xl mx-auto px-4 py-16 pb-20 md:py-8 border-t md:px-0 border-neutral-200 dark:border-secondary flex items-center justify-between">
       <div>
         <span className="text-sm font-medium text-zinc-500 dark:text-zinc-200">
           Made with ❤️ - {new Date().getFullYear()}
@@ -46,7 +56,7 @@ const Footer = () => {
             </Button>
           ))}
         </div>
-        <Select defaultValue="EN">
+        <Select defaultValue={locale} onValueChange={(value) => router.replace(redirectedPathname(value as Locale))}>
           <SelectTrigger className="group text-zinc-500 w-[134px] h-10 hover:text-zinc-700">
             <div className="flex items-center">
               <Earth className="w-4 h-4 mr-2 text-zinc-500 group-hover:text-zinc-700" />
@@ -56,8 +66,8 @@ const Footer = () => {
           <SelectContent>
             <SelectGroup>
               <SelectLabel>Languages</SelectLabel>
-              <SelectItem value="EN">English</SelectItem>
-              <SelectItem disabled value="PT">Portugues(soon)</SelectItem>
+              <SelectItem value="en">English</SelectItem>
+              <SelectItem value="pt">Portugues</SelectItem>
             </SelectGroup>
           </SelectContent>
         </Select>

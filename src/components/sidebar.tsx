@@ -7,18 +7,33 @@ import { ChevronRightIcon, PanelLeftClose, PanelLeftOpen } from "lucide-react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
-import { navlinks } from "@/constants/navlinks";
-import { socials } from "@/constants/socials";
 import { Heading } from "./ui/heading";
-
+import { Book, Bot, Code2, Mail, TerminalSquare } from "lucide-react";
+import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import flagMap from "@/utils/flag-maps";
 import { RequestCookie } from "next/dist/compiled/@edge-runtime/cookies";
 import { ScrollArea } from "@/components/ui/scroll-area"
+import { SidebarType } from "@/types/sidebar";
 
 type SidebarProps = {
   geoData?: RequestCookie;
+  sidebarData: SidebarType;
 }
-export const Sidebar = ({geoData}: SidebarProps) => {
+
+
+const iconMap = {
+  TerminalSquare: TerminalSquare,
+  Bot: Bot,
+  Code2: Code2,
+  Book: Book,
+  Mail: Mail,
+  InstagramLogoIcon: InstagramLogoIcon,
+  LinkedInLogoIcon: LinkedInLogoIcon,
+  FaSquareXTwitter: FaSquareXTwitter,
+};
+
+export const Sidebar = ({geoData, sidebarData}: SidebarProps) => {
   const [open, setOpen] = useState(isMobile() ? false : true);
   const router = useRouter();
   const resumeBtnOnclick = () => {
@@ -41,14 +56,14 @@ export const Sidebar = ({geoData}: SidebarProps) => {
             className="left-0 px-6 py-12 md:py-10 z-[100] h-screen max-w-[16rem] bg-secondary fixed dark:bg-zinc-900 lg:w-fit flex flex-col justify-between lg:relative"
           >
             <ScrollArea className="flex-1 pr-4">
-              <SidebarHeader geoData={geoData} />
-              <Navigation setOpen={setOpen} />
+              <SidebarHeader sidebarData={sidebarData} geoData={geoData} />
+              <Navigation sidebarData={sidebarData} setOpen={setOpen} />
             </ScrollArea>
             <Button 
               onClick={resumeBtnOnclick}
-              className="rounded-full shadow-md w-[180px] z[110] mb-4"
+              className="rounded-full shadow-md w-[180px] z[110] mb-16 md:mb-4"
             >
-              <span className="text-sm font-semibold text-primary-foreground">Read resume</span>
+              <span className="text-sm font-semibold text-primary-foreground">{sidebarData.resumeButton.label}</span>
               <ChevronRightIcon className="ml-auto w-4 h-4 text-primary-foreground" />
             </Button>
           </motion.aside>
@@ -65,14 +80,14 @@ export const Sidebar = ({geoData}: SidebarProps) => {
 }
 
 
-const SidebarHeader = ({geoData}: SidebarProps) => {
+const SidebarHeader = ({geoData, sidebarData}: SidebarProps) => {
   const parsedGeo = JSON.parse(geoData?.value || "{}")
   const flag = flagMap.get(parsedGeo.country)
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center space-x-2">
         <Image
-          src="/mmd-pic-avatar.jpeg"
+          src={sidebarData.heading.avatarSrc}
           alt="avatar"
           width="48"
           height="48"
@@ -81,16 +96,16 @@ const SidebarHeader = ({geoData}: SidebarProps) => {
         />
         <div className="flex flex-col text-sm">
           <p className="font-bold">
-            Mohammad Moradi
+            {sidebarData.heading.name}
           </p>
           <p className="font-light">
-            Fullstack Dev
+            {sidebarData.heading.role}
           </p>
         </div>
       </div>
       <div className="flex flex-col gap-1">
         <span className="text-xs text-primary">
-          Latest Visit:
+          {sidebarData.heading.latestVisit}
         </span>
         <div className="rounded-full w-fit bg-white/80 border border-gray-200 dark:border-zinc-800 dark:bg-zinc-800 shadow-md backdrop-blur-sm px-4 py-1 flex items-center gap-2">
         {flag &&(
@@ -111,7 +126,9 @@ const SidebarHeader = ({geoData}: SidebarProps) => {
 
 export const Navigation = ({
   setOpen,
+  sidebarData
 }: {
+  sidebarData: SidebarType;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   const pathname = usePathname();
@@ -120,7 +137,9 @@ export const Navigation = ({
 
   return (
     <div className="flex flex-col space-y-1 my-10 relative z-[100]">
-      {navlinks.map((link) => (
+      {sidebarData.navlinks.map((link) => {
+         const IconComponent = iconMap[link.icon as keyof typeof iconMap];
+        return (
         <Link
           key={link.href}
           href={link.href}
@@ -130,37 +149,43 @@ export const Navigation = ({
             isActive(link.href) && "bg-white/70 shadow-lg text-primary dark:bg-zinc-800"
           )}
         >
-          <link.icon
+          {IconComponent && 
+            <IconComponent
             className={cn(
               "h-4 w-4 flex-shrink-0",
               isActive(link.href) && "text-sky-500 dark:text-emerald-500"
             )}
-          />
+          />}
           <span>{link.label}</span>
         </Link>
-      ))}
+      )})}
 
       <Heading className="text-sm md:text-sm font-semibold lg:text-sm pt-10 px-2">
         Socials
       </Heading>
-      {socials.map((link) => (
-        <Link
-          key={link.href}
-          href={link.href}
-          target="_blank" rel="noopener noreferrer"
-          className={cn(
-            "text-zinc-500 hover:text-primary transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm"
-          )}
-        >
-          <link.icon
+      {sidebarData.socials.map((link) => {
+        const IconComponent = iconMap[link.icon as keyof typeof iconMap];
+        return (
+          <Link
+            key={link.href}
+            href={link.href}
+            target="_blank" rel="noopener noreferrer"
             className={cn(
-              "h-4 w-4 flex-shrink-0",
-              isActive(link.href) && "text-sky-500"
+              "text-zinc-500 hover:text-primary transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm"
             )}
-          />
-          <span>{link.label}</span>
-        </Link>
-      ))}
+          >
+            {IconComponent &&
+            <IconComponent
+              className={cn(
+                "h-4 w-4 flex-shrink-0",
+                isActive(link.href) && "text-sky-500"
+              )}
+            />
+            }
+            <span>{link.label}</span>
+          </Link>
+        )
+      })}
     </div>
   );
 };

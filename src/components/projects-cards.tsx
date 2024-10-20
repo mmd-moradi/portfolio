@@ -1,14 +1,15 @@
 "use client";
-import { projects } from "@/constants/projects"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 import { Heading } from "./ui/heading"
 import { Paragraph } from "./paragraph"
 import { TechBadge } from "./tech-badge";
+import { ProjectType } from "@/types/projects";
+import { Locale } from "@/i18n-config";
 
 
-export const ProjectsCards = () => {
+export const ProjectsCards = ({ projects, locale }: {projects: ProjectType[]; locale: Locale}) => {
   return (
     <div>
       <div className="flex flex-col gap-10">
@@ -26,7 +27,7 @@ export const ProjectsCards = () => {
             transition={{ duration: 0.2, delay: index * 0.1 }}
           >
             <Link
-              href={project.slug ? `/projects/${project.slug}` : project.href}
+              href={project.slug ? `/${locale}/projects/${project.slug}` : project.href}
               key={project.href}
               className="group space-y-4 md:space-y-0 md:space-x-4 flex flex-col md:flex-row hover:bg-gray-50 dark:hover:bg-zinc-900 rounded-2xl transition duration-200 pt-4"
             >
