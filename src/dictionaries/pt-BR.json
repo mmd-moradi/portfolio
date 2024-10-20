@@ -9,7 +9,7 @@
       {
         "href": "https://libber.co/",
         "title": "Libber",
-        "description": "Contribuí o desenvolvimento de uma startup B2B de contratação temporária, criando a página de apresentação, software interno e aplicativo móvel, enquanto liderava o design de recursos e automação.",
+        "description": "Contribuí o desenvolvimento de uma startup B2B, criando a página de apresentação, software interno e aplicativo móvel, enquanto liderava o design de recursos e automação.",
         "thumbnail": "/images/libber-thumb1.png",
         "images": ["/images/libber-thumb1.png", "/images/libber-thumb2.png", "/images/libber-3.png", "/images/libber-4.png"],
         "stack": ["TypeScript", "Next.js", "React", "Tailwind CSS", "Node.js", "Go", "PostgreSQL", "Drizzle ORM", "Docker", "RabbitMQ", "AWS"],
@@ -255,12 +255,12 @@
           "Grafana"
         ],
         "date": "05/11/2023 - Presente",
-        "description": "Startup de contratação temporária",
+        "description": "Startup B2B",
         "location": "Brasil, Distrito Federal - Híbrido",
         "responsibilities": [
           "Contribuí para a construção e design de software interno e sistemas de automação para gerenciar operações, reduzindo tarefas manuais em 40% e melhorando a velocidade operacional em 60%, o que foi crucial para a eficiência do negócio.",
-          "Desenvolvi e projetei a página de aterrissagem juntamente com um formulário de lead em múltiplas etapas para otimizar a aquisição de usuários.",
-          "Criei e projetei o aplicativo móvel para gerentes, facilitando a gestão de funcionários temporários, incluindo wireframing, prototipagem e ideação de recursos voltados para o mercado B2B."
+          "Desenvolvi e projetei a landing page juntamente com um formulário de lead em múltiplas etapas para otimizar a aquisição de usuários.",
+          "Criei e projetei o aplicativo móvel, incluindo wireframing, prototipagem e ideação de recursos voltados para o mercado B2B."
         ]
       },
       {

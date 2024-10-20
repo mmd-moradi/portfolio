@@ -10,7 +10,7 @@
       {
         "href": "https://libber.co/",
         "title": "Libber",
-        "description": "Contributed the development of a B2B temp staffing startup, creating the landing page, internal software, and mobile app while leading feature design and automation.",
+        "description": "Contributed the development of a B2B startup, creating the landing page, internal software, and mobile app while leading feature design and automation.",
         "thumbnail": "/images/libber-thumb1.png",
         "images": ["/images/libber-thumb1.png", "/images/libber-thumb2.png", "/images/libber-3.png", "/images/libber-4.png"],
         "stack": ["TypeScript", "Next.js", "React", "Tailwind CSS", "Node.js", "Go", "PostgreSQL", "Drizzle ORM", "Docker", "RabbitMQ", "AWS"],
@@ -255,12 +255,12 @@
           "Grafana"
         ],
         "date": "05/11/2023 - Present",
-        "description": "Temp staffing startup",
+        "description": "B2B startup",
         "location": "Brazil, Distrito Federal - Hybrid",
         "responsibilities": [
           "Contributed to the build and design of internal software and automation systems to manage operations, reducing manual tasks by 40% and improving operational speed by 60%, which was crucial for business efficiency.",
           "Developed and designed the landing page along with a multi-step lead form to optimize user acquisition.",
-          "Built and designed the mobile app for managers to streamline the management of temporary staff, including wireframing, prototyping, and feature ideation tailored for the B2B market."
+          "Built and designed the mobile app, including wireframing, prototyping, and feature ideation tailored for the B2B market."
         ]
       },
       {
