@@ -15,10 +15,12 @@ import flagMap from "@/utils/flag-maps";
 import { RequestCookie } from "next/dist/compiled/@edge-runtime/cookies";
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { SidebarType } from "@/types/sidebar";
+import { Locale } from "@/i18n-config";
 
 type SidebarProps = {
   geoData?: RequestCookie;
   sidebarData: SidebarType;
+  locale: Locale;
 }
 
 
@@ -33,11 +35,11 @@ const iconMap = {
   FaSquareXTwitter: FaSquareXTwitter,
 };
 
-export const Sidebar = ({geoData, sidebarData}: SidebarProps) => {
+export const Sidebar = ({geoData, sidebarData, locale}: SidebarProps) => {
   const [open, setOpen] = useState(isMobile() ? false : true);
   const router = useRouter();
   const resumeBtnOnclick = () => {
-    router.push("/resume")
+    router.push(`${locale}/resume`)
 
     if (isMobile()) {
       setOpen(false)
@@ -80,7 +82,7 @@ export const Sidebar = ({geoData, sidebarData}: SidebarProps) => {
 }
 
 
-const SidebarHeader = ({geoData, sidebarData}: SidebarProps) => {
+const SidebarHeader = ({geoData, sidebarData}: Omit<SidebarProps, "locale">) => {
   const parsedGeo = JSON.parse(geoData?.value || "{}")
   const flag = flagMap.get(parsedGeo.country)
   return (

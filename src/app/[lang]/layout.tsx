@@ -49,7 +49,7 @@ export default async function RootLayout({
         disableTransitionOnChange
         >
           <div className="flex-1 flex">
-            <Sidebar sidebarData={dictionary.sidebar as SidebarType} geoData={geoData} />
+            <Sidebar locale={params.lang} sidebarData={dictionary.sidebar as SidebarType} geoData={geoData} />
             <div className="lg:pl-2 lg:pt-2 bg-secondary dark:bg-zinc-900 flex-1 overflow-auto">
               <div className="flex-1 bg-background min-h-screen lg:rounded-tl-xl border-2 border-transparent lg:border-neutral-200 overflow-y-auto dark:lg:border-neutral-700">
                 {children}
