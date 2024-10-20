@@ -1,7 +1,7 @@
 {
   "home": {
     "greeting": "👋",
-    "introductionHeading": "Olá! Sou o Mohammad",
+    "introductionHeading": "Oi! Sou o Mohammad",
     "introductionParagraph": "Sou um desenvolvedor full-stack com uma {highlight}mentalidade empreendedora{highlight}, apaixonado por ajudar negócios e empresas a construir e melhorar suas soluções de software. Com {highlight}3 anos de experiência{highlight}, foco em criar aplicações web escaláveis, otimizadas e visualmente atraentes.",
     "specializationParagraph": "Minha especialização é em {highlight}TypeScript{highlight}, {highlight}Next.js{highlight}, {highlight}React{highlight}, {highlight}Node.js{highlight} e trabalho com bancos de dados {highlight}SQL{highlight} e {highlight}NoSQL{highlight} para desenvolver produtos e aplicativos web que causam um impacto significativo. Gosto de colaborar com empresas para dar vida às suas ideias, seja desenvolvendo novo software do zero ou aprimorando sistemas existentes com novos recursos.",
     "projectsHeading": "Nos quais tenho trabalhado",

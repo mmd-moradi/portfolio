@@ -3,14 +3,6 @@ import { NextRequest, NextResponse } from "next/server"
 import Negotiator from "negotiator";
 import { match as matchLocale } from "@formatjs/intl-localematcher";
 
-export function addGeoDataToCookies(request: NextRequest, response: NextResponse) {
-  if (request.geo?.city || request.geo?.country) {
-    response.cookies.set("geo-data", JSON.stringify({ country: request.geo?.country, city: request.geo?.city }))
-    return response
-  }
-  return response
-}
-
 
 
 const getLocale = (request: NextRequest): string | undefined => {
