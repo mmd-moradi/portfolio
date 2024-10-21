@@ -9,7 +9,7 @@
       {
         "href": "https://libber.co/",
         "title": "Libber",
-        "description": "Contribuí o desenvolvimento de uma startup B2B, criando a página de apresentação, software interno e aplicativo móvel, enquanto liderava o design de recursos e automação.",
+        "description": "Contribuí o desenvolvimento de uma startup B2B, criando a landing page, software interno e aplicativo móvel, enquanto liderava o design de recursos e automação.",
         "thumbnail": "/images/libber-thumb1.png",
         "images": ["/images/libber-thumb1.png", "/images/libber-thumb2.png", "/images/libber-3.png", "/images/libber-4.png"],
         "stack": ["TypeScript", "Next.js", "React", "Tailwind CSS", "Node.js", "Go", "PostgreSQL", "Drizzle ORM", "Docker", "RabbitMQ", "AWS"],
