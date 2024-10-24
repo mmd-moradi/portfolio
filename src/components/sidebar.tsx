@@ -100,7 +100,7 @@ const SidebarHeader = ({geoData, sidebarData}: Omit<SidebarProps, "locale">) => 
           <p className="font-bold">
             {sidebarData.heading.name}
           </p>
-          <p className="font-light">
+          <p className="text-sm">
             {sidebarData.heading.role}
           </p>
         </div>
