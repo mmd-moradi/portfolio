@@ -19,7 +19,7 @@ export const createVisitor = async (command: CreateVisitorDTO) => {
   return visitor
 }
 
-export const getLatestVisit = async () => {
+export const getLatestVisitor = async () => {
   const [ visitor ] = await db
   .select()
   .from(visitorsTable)
