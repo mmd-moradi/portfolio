@@ -16,6 +16,7 @@ import { RequestCookie } from "next/dist/compiled/@edge-runtime/cookies";
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { SidebarType } from "@/types/sidebar";
 import { Locale } from "@/i18n-config";
+import Flag from "react-world-flags";
 
 type SidebarProps = {
   geoData?: RequestCookie;
@@ -84,13 +85,12 @@ export const Sidebar = ({geoData, sidebarData, locale}: SidebarProps) => {
 
 const SidebarHeader = ({geoData, sidebarData}: Omit<SidebarProps, "locale">) => {
   const parsedGeo = JSON.parse(geoData?.value || "{}")
-  const flag = flagMap.get(parsedGeo.country)
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center space-x-2">
         <Image
           src={sidebarData.heading.avatarSrc}
-          alt="avatar"
+          alt="Mohammad Moradi avatar"
           width="48"
           height="48"
           quality={100}
@@ -109,18 +109,12 @@ const SidebarHeader = ({geoData, sidebarData}: Omit<SidebarProps, "locale">) => 
         <span className="text-xs text-primary">
           {sidebarData.heading.latestVisit}
         </span>
+      {parsedGeo && (
         <div className="rounded-full w-fit bg-white/80 border border-gray-200 dark:border-zinc-800 dark:bg-zinc-800 shadow-md backdrop-blur-sm px-4 py-1 flex items-center gap-2">
-        {flag &&(
-            <Image 
-              src={flag}
-              alt="flag"
-              width={16}
-              height={16}
-              className="w-4 h-4 object-contain rounded-sm"
-            />
-        )}
-         {parsedGeo && <span className="text-xs font-medium text-foreground">{parsedGeo.country}, {parsedGeo.city}</span>}
+          <Flag code={parsedGeo.country} height="16" width="16" className="rounded-full" />
+         <span className="text-xs font-medium text-foreground">{parsedGeo.country}, {parsedGeo.city}</span>
         </div>
+        )}
       </div>
     </div>
   )
