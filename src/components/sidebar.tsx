@@ -11,7 +11,6 @@ import { Heading } from "./ui/heading";
 import { Book, Bot, Code2, Mail, TerminalSquare } from "lucide-react";
 import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import flagMap from "@/utils/flag-maps";
 import { RequestCookie } from "next/dist/compiled/@edge-runtime/cookies";
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { SidebarType } from "@/types/sidebar";

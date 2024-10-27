@@ -1,16 +1,16 @@
 import { NextRequest, NextResponse } from "next/server"
-import { handleVisitorGeo, setContentLanguage } from "./utils/middlewarefunctions"
+import { visitorGeoHandler, setContentLanguage } from "./utils/middlewarefunctions"
 
 
 
 export async function middleware(request: NextRequest) {
   let response = setContentLanguage(request)
   if (response) {
-    response = await handleVisitorGeo(request, response)
+    response = await visitorGeoHandler(request, response)
     return response
   }
   const initialResponse = NextResponse.next()
-  const geoResponse = await handleVisitorGeo(request, initialResponse)
+  const geoResponse = await visitorGeoHandler(request, initialResponse)
   return geoResponse
 }
  
