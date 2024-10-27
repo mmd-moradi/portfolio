@@ -1,17 +1,17 @@
 import { NextRequest, NextResponse } from "next/server"
-import { setContentLanguage } from "./utils/middlewarefunctions"
+import { handleVisitorGeo, setContentLanguage } from "./utils/middlewarefunctions"
 
 
 
-export function middleware(request: NextRequest) {
-  const response = setContentLanguage(request)
+export async function middleware(request: NextRequest) {
+  let response = setContentLanguage(request)
   if (response) {
-    response.cookies.set("geo-data", JSON.stringify({ country: request.geo?.country, city: request.geo?.city }))
+    response = await handleVisitorGeo(request, response)
     return response
   }
   const initialResponse = NextResponse.next()
-  initialResponse.cookies.set("geo-data", JSON.stringify({ country: request.geo?.country, city: request.geo?.city }))
-  return initialResponse
+  const geoResponse = await handleVisitorGeo(request, initialResponse)
+  return geoResponse
 }
  
 

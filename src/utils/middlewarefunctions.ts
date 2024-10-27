@@ -2,6 +2,7 @@ import { i18n } from "@/i18n-config"
 import { NextRequest, NextResponse } from "next/server"
 import Negotiator from "negotiator";
 import { match as matchLocale } from "@formatjs/intl-localematcher";
+import { createVisitor, getLatestVisit } from "@/backend/actions/latest-visit";
 
 
 
@@ -47,3 +48,14 @@ export const setContentLanguage = (request: NextRequest) => {
 
 
 
+export const handleVisitorGeo = async(request: NextRequest, response: NextResponse) => {
+  const latestVisitor = await getLatestVisit()
+  response.cookies.set("geo-data", JSON.stringify({ country: latestVisitor.country, city: latestVisitor.city }))
+
+  if (request.geo?.country === latestVisitor.country && request.geo?.city === latestVisitor.city) return response
+  if (request.geo?.country === undefined || request.geo?.city === undefined) return response
+  
+  const newVisitor = createVisitor({ country: request.geo?.country, city: request.geo?.city })
+  
+  return response
+}
