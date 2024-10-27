@@ -6,10 +6,10 @@ import { Sidebar } from "@/components/sidebar";
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/sonner"
 import Footer from "@/components/footer";
-import { cookies } from "next/headers";
 import { i18n, Locale } from "@/i18n-config";
 import { getDictionary } from "@/get-dictionary";
 import { SidebarType } from "@/types/sidebar";
+import { getLatestVisitor } from "@/backend/actions/latest-visit";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,9 +33,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { lang: Locale }
 }>) {
-
-  const cookieStore = cookies()
-  const geoData = cookieStore.get("geo-data");
+  const latestVisitor = await getLatestVisitor();
   const dictionary = await getDictionary(params.lang);
   return (
     <html lang={params.lang} suppressHydrationWarning>
@@ -49,7 +47,7 @@ export default async function RootLayout({
         disableTransitionOnChange
         >
           <div className="flex-1 flex">
-            <Sidebar locale={params.lang} sidebarData={dictionary.sidebar as SidebarType} geoData={geoData} />
+            <Sidebar locale={params.lang} sidebarData={dictionary.sidebar as SidebarType} latestVisitor={latestVisitor} />
             <div className="lg:pl-2 lg:pt-2 bg-secondary dark:bg-zinc-900 flex-1 overflow-auto">
               <div className="flex-1 bg-background min-h-screen lg:rounded-tl-xl border-2 border-transparent lg:border-neutral-200 overflow-y-auto dark:lg:border-neutral-700">
                 {children}

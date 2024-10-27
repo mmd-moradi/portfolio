@@ -11,14 +11,14 @@ import { Heading } from "./ui/heading";
 import { Book, Bot, Code2, Mail, TerminalSquare } from "lucide-react";
 import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { RequestCookie } from "next/dist/compiled/@edge-runtime/cookies";
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { SidebarType } from "@/types/sidebar";
 import { Locale } from "@/i18n-config";
 import Flag from "react-world-flags";
+import { VisitorTable } from "@/backend/db/schema";
 
 type SidebarProps = {
-  geoData?: RequestCookie;
+  latestVisitor?: VisitorTable;
   sidebarData: SidebarType;
   locale: Locale;
 }
@@ -35,7 +35,7 @@ const iconMap = {
   FaSquareXTwitter: FaSquareXTwitter,
 };
 
-export const Sidebar = ({geoData, sidebarData, locale}: SidebarProps) => {
+export const Sidebar = ({latestVisitor, sidebarData, locale}: SidebarProps) => {
   const [open, setOpen] = useState(isMobile() ? false : true);
   const router = useRouter();
   const resumeBtnOnclick = () => {
@@ -58,7 +58,7 @@ export const Sidebar = ({geoData, sidebarData, locale}: SidebarProps) => {
             className="left-0 px-6 py-12 md:py-10 z-[100] h-screen max-w-[16rem] bg-secondary fixed dark:bg-zinc-900 lg:w-fit flex flex-col justify-between lg:relative"
           >
             <ScrollArea className="flex-1 pr-4">
-              <SidebarHeader sidebarData={sidebarData} geoData={geoData} />
+              <SidebarHeader sidebarData={sidebarData} latestVisitor={latestVisitor} />
               <Navigation sidebarData={sidebarData} setOpen={setOpen} />
             </ScrollArea>
             <Button 
@@ -82,8 +82,7 @@ export const Sidebar = ({geoData, sidebarData, locale}: SidebarProps) => {
 }
 
 
-const SidebarHeader = ({geoData, sidebarData}: Omit<SidebarProps, "locale">) => {
-  const parsedGeo = JSON.parse(geoData?.value || "{}")
+const SidebarHeader = ({latestVisitor, sidebarData}: Omit<SidebarProps, "locale">) => {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center space-x-2">
@@ -108,10 +107,10 @@ const SidebarHeader = ({geoData, sidebarData}: Omit<SidebarProps, "locale">) => 
         <span className="text-xs text-primary">
           {sidebarData.heading.latestVisit}
         </span>
-      {parsedGeo && (
+      {latestVisitor && (
         <div className="rounded-full w-fit bg-white/80 border border-gray-200 dark:border-zinc-800 dark:bg-zinc-800 shadow-md backdrop-blur-sm px-4 py-1 flex items-center gap-2">
-          <Flag code={parsedGeo.country} height="16" width="16" className="rounded-full" />
-         <span className="text-xs font-medium text-foreground">{parsedGeo.country}, {parsedGeo.city}</span>
+          <Flag code={latestVisitor.country} height="16" width="16" className="rounded-full" />
+         <span className="text-xs font-medium text-foreground">{latestVisitor.country}, {latestVisitor.city}</span>
         </div>
         )}
       </div>

@@ -50,9 +50,8 @@ export const setContentLanguage = (request: NextRequest) => {
 
 export const visitorGeoHandler = async(request: NextRequest, response: NextResponse) => {
   const latestVisitor = await getLatestVisitor()
-  response.cookies.set("geo-data", JSON.stringify({ country: latestVisitor.country, city: latestVisitor.city }))
-
   if (request.geo?.country === latestVisitor.country && request.geo?.city === latestVisitor.city) return response
+
   if (request.geo?.country === undefined || request.geo?.city === undefined) return response
   
   await createVisitor({ country: request.geo?.country, city: request.geo?.city })
