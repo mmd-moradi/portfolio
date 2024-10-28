@@ -117,7 +117,7 @@ const SidebarHeader = ({latestVisitor, sidebarData}: SidebarHeaderProps) => {
       {latestVisitor && (
         <div className="rounded-full w-fit bg-white/80 border border-gray-200 dark:border-zinc-800 dark:bg-zinc-800 shadow-md backdrop-blur-sm px-4 py-1 flex items-center gap-2">
           <Flag code={latestVisitor.country} height="16" width="16" className="rounded-full" />
-         <span className="text-xs font-medium text-foreground">{latestVisitor.country}, {latestVisitor.city}</span>
+         <span className="text-xs font-medium text-foreground">{latestVisitor.city}, {latestVisitor.country}</span>
         </div>
         )}
       </div>
