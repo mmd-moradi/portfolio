@@ -11,10 +11,13 @@ import { getDictionary } from "@/get-dictionary";
 import { SidebarType } from "@/types/sidebar";
 import { getLatestVisitor } from "@/backend/actions/latest-visit";
 
+export const revalidate = 1;
+
 const inter = Inter({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 })
+
 
 export const metadata: Metadata = {
   title: "Mohammad Moradi - Full Stack Developer",

@@ -25,6 +25,6 @@ export const getLatestVisitor = async () => {
   .from(visitorsTable)
   .orderBy(desc(visitorsTable.visitedAt))
   .limit(1)
-
+  
   return visitor
 }

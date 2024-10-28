@@ -18,7 +18,7 @@ import Flag from "react-world-flags";
 import { VisitorTable } from "@/backend/db/schema";
 
 type SidebarProps = {
-  latestVisitor?: VisitorTable;
+  latestVisitor: VisitorTable | null;
   sidebarData: SidebarType;
   locale: Locale;
 }
@@ -35,7 +35,7 @@ const iconMap = {
   FaSquareXTwitter: FaSquareXTwitter,
 };
 
-export const Sidebar = ({latestVisitor, sidebarData, locale}: SidebarProps) => {
+export const Sidebar = ({ latestVisitor, sidebarData, locale}: SidebarProps) => {
   const [open, setOpen] = useState(isMobile() ? false : true);
   const router = useRouter();
   const resumeBtnOnclick = () => {
@@ -45,6 +45,8 @@ export const Sidebar = ({latestVisitor, sidebarData, locale}: SidebarProps) => {
       setOpen(false)
     } 
   }
+
+
   return (
     <>
       <AnimatePresence>
@@ -82,7 +84,12 @@ export const Sidebar = ({latestVisitor, sidebarData, locale}: SidebarProps) => {
 }
 
 
-const SidebarHeader = ({latestVisitor, sidebarData}: Omit<SidebarProps, "locale">) => {
+type SidebarHeaderProps = {
+  latestVisitor: VisitorTable | null;
+  sidebarData: SidebarType;
+}
+
+const SidebarHeader = ({latestVisitor, sidebarData}: SidebarHeaderProps) => {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center space-x-2">
