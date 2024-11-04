@@ -39,7 +39,7 @@ export const Sidebar = ({ latestVisitor, sidebarData, locale}: SidebarProps) => 
   const [open, setOpen] = useState(isMobile() ? false : true);
   const router = useRouter();
   const resumeBtnOnclick = () => {
-    router.push(`${locale}/resume`)
+    router.push(`/resume`)
 
     if (isMobile()) {
       setOpen(false)
