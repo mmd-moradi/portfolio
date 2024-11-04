@@ -13,14 +13,12 @@ import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { SidebarType } from "@/types/sidebar";
-import { Locale } from "@/i18n-config";
 import Flag from "react-world-flags";
 import { VisitorTable } from "@/backend/db/schema";
 
 type SidebarProps = {
   latestVisitor: VisitorTable | null;
   sidebarData: SidebarType;
-  locale: Locale;
 }
 
 
@@ -35,7 +33,7 @@ const iconMap = {
   FaSquareXTwitter: FaSquareXTwitter,
 };
 
-export const Sidebar = ({ latestVisitor, sidebarData, locale}: SidebarProps) => {
+export const Sidebar = ({ latestVisitor, sidebarData}: SidebarProps) => {
   const [open, setOpen] = useState(isMobile() ? false : true);
   const router = useRouter();
   const resumeBtnOnclick = () => {
