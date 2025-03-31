@@ -3,7 +3,7 @@ import { ProjectType } from "@/types/projects";
 
 export const projects: ProjectType[] = [
   {
-    href: "https://libber.co/",
+    href: "https://libber.com.br/",
     title: "Libber",
     description: "Spearheaded the development of a B2B temp staffing startup, creating the landing page, internal software, and mobile app while leading feature design and automation.",
     thumbnail: "/images/libber-thumb1.png",

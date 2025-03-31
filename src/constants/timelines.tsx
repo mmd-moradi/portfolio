@@ -5,6 +5,7 @@ export const timelineData: TimeLineType[] = [
     company: "Libber",
     role: "Fullstack Developer",
     stacks: [
+      "Go", 
       "TypeScript", 
       "Next.js", 
       "React", 
@@ -12,7 +13,6 @@ export const timelineData: TimeLineType[] = [
       "Drizzle ORM", 
       "TailwindCSS", 
       "Node.js", 
-      "Go", 
       "AWS", 
       "RabbitMQ", 
       "Redis", 

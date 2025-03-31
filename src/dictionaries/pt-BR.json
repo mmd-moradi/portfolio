@@ -3,16 +3,16 @@
     "greeting": "👋",
     "introductionHeading": "Oi! Sou o Mohammad",
     "introductionParagraph": "Sou um desenvolvedor full-stack com uma {highlight}mentalidade empreendedora{highlight}, apaixonado por ajudar negócios e empresas a construir e melhorar suas soluções de software. Com {highlight}3 anos de experiência{highlight}, foco em criar aplicações web escaláveis, otimizadas e visualmente atraentes.",
-    "specializationParagraph": "Minha especialização é em {highlight}TypeScript{highlight}, {highlight}Next.js{highlight}, {highlight}React{highlight}, {highlight}Node.js{highlight} e trabalho com bancos de dados {highlight}SQL{highlight} e {highlight}NoSQL{highlight} para desenvolver produtos e aplicativos web que causam um impacto significativo. Gosto de colaborar com empresas para dar vida às suas ideias, seja desenvolvendo novo software do zero ou aprimorando sistemas existentes com novos recursos.",
+    "specializationParagraph": "Minha especialização é em {highlight}Go{highlight}, {highlight}TypeScript{highlight}, {highlight}Next.js{highlight}, {highlight}React{highlight}, {highlight}Node.js{highlight} e trabalho com bancos de dados {highlight}SQL{highlight} e {highlight}NoSQL{highlight} para desenvolver produtos e aplicativos web que causam um impacto significativo. Gosto de colaborar com empresas para dar vida às suas ideias, seja desenvolvendo novo software do zero ou aprimorando sistemas existentes com novos recursos.",
     "projectsHeading": "Nos quais tenho trabalhado",
     "projects": [
       {
-        "href": "https://libber.co/",
+        "href": "https://libber.com.br/",
         "title": "Libber",
         "description": "Contribuí o desenvolvimento de uma startup B2B, criando a landing page, software interno e aplicativo móvel, enquanto liderava o design de recursos e automação.",
         "thumbnail": "/images/libber-thumb1.png",
         "images": ["/images/libber-thumb1.png", "/images/libber-thumb2.png"],
-        "stack": ["TypeScript", "Next.js", "React", "Tailwind CSS", "Node.js", "Go", "PostgreSQL", "Drizzle ORM", "Docker", "RabbitMQ", "AWS"],
+        "stack": ["Go", "TypeScript", "Next.js", "React", "Tailwind CSS", "Node.js", "PostgreSQL", "Drizzle ORM", "Docker", "RabbitMQ", "AWS"],
         "slug": "libber"
       },
       {
@@ -55,6 +55,11 @@
     "techStacks": {
       "title": "Tecnologias",
       "stacks": [
+        {
+          "title": "Go",
+          "className": "h-16 w-16",
+          "src": "/stacks/golang.svg"
+        },
         {
           "title": "TypeScript",
           "className": "h-12 w-12",
@@ -104,6 +109,11 @@
           "title": "Docker",
           "className": "h-12 w-12",
           "src": "/stacks/docker.svg"
+        },
+        {
+          "title": "Kubernetes",
+          "className": "h-12 w-12",
+          "src": "/stacks/kubernetes.svg"
         },
         {
           "title": "Vercel",
@@ -239,6 +249,7 @@
         "company": "Libber",
         "role": "Desenvolvedor Fullstack",
         "stacks": [
+          "Go",
           "TypeScript", 
           "Next.js", 
           "React", 
@@ -246,7 +257,6 @@
           "Drizzle ORM", 
           "TailwindCSS", 
           "Node.js", 
-          "Go", 
           "AWS", 
           "RabbitMQ", 
           "Redis", 
