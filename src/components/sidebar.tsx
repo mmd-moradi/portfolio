@@ -35,9 +35,11 @@ const iconMap = {
 
 export const Sidebar = ({ latestVisitor, sidebarData}: SidebarProps) => {
   const [open, setOpen] = useState(isMobile() ? false : true);
+    const path = usePathname();
+    const local = path.split("/")[1];
   const router = useRouter();
   const resumeBtnOnclick = () => {
-    router.push(`/resume`)
+    router.replace(`/${local}/resume`)
 
     if (isMobile()) {
       setOpen(false)

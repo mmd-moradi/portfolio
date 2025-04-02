@@ -210,6 +210,14 @@
     "description": "Sharing insights on {highlight}tech{highlight}, {highlight}marketing{highlight}, and {highlight}entrepreneurship{highlight} as a way to give back, inspired by all I’ve learned for free from others’ blogs. I hope my posts help you grow and innovate.",
     "blogsCards": [
       {
+        "title": "Why TypeScript Rebuilt Its Compiler in Go: The Real Reasons Behind the 10x Speed!",
+        "summary": "TypeScript just made a game-changing move, rewriting its compiler in Go, making it 10x faster than before. But why did they choose Go over other languages?",
+        "tags": ["TypeScript", "Go", "Concurrency", "Software Engineering"],
+        "publishedAt": "2025-04-01T08:00:00.000Z",
+        "slug": "typescript-go",
+        "thumbnail": "/images/typescript-go-thumb.png"
+      },
+      {
         "title": "Lessons from Clean Code",
         "summary": "My takeaways from Clean Code by Robert C. Martin, focusing on writing simpler, more efficient software.",
         "publishedAt": "2024-09-10T00:00:00.000Z",
@@ -217,6 +225,7 @@
         "tags": ["Software Engineering", "Book Review", "Clean Code"],
         "thumbnail": "/images/clean-code-thumb.jpg"
       }
+
     ]
   },
   "contact": {

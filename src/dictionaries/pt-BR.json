@@ -210,6 +210,14 @@
     "description": "Compartilhando insights sobre {highlight}tecnologia{highlight}, {highlight}marketing{highlight} e {highlight}empreendedorismo{highlight} como uma forma de retribuir, inspirado por tudo que aprendi gratuitamente com os blogs de outras pessoas. Espero que minhas postagens ajudem você a crescer e inovar.",
     "blogsCards": [
       {
+        "title": "Por que o TypeScript reescreveu seu compilador em Go? Os verdadeiros motivos por trás da velocidade 10x!",
+        "summary": "O TypeScript acaba de dar um passo revolucionário, reescrevendo seu compilador em Go e tornando-o 10 vezes mais rápido. Mas por que escolheram Go em vez de outras linguagens?",
+        "tags": ["TypeScript", "Go", "Concorrência", "Engenharia de Software"],
+        "publishedAt": "2025-04-01T08:00:00.000Z",
+        "slug": "typescript-go",
+        "thumbnail": "/images/typescript-go-thumb.png"
+      },
+      {
         "title": "Lições de Clean Code",
         "summary": "Minhas lições do Clean Code de Robert C. Martin, focando em escrever software mais simples e eficiente.",
         "publishedAt": "2024-09-10T00:00:00.000Z",

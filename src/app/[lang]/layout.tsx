@@ -22,7 +22,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Mohammad Moradi - Full Stack Developer",
   description: "Passionate about building impactful software, Mohammad Moradi is a full-stack developer dedicated to creating scalable, user-focused applications that help businesses achieve their goals and enhance digital experiences.",
-  keywords: ["Full-Stack Web Developer", "Software Developer Portfolio", "React and Next.js Developer", "Scalable Web Applications", "Professional Web Development"]
+  keywords: ["Full-Stack Web Developer", "Software Developer Portfolio", "Golang engineer", "React and Next.js Developer", "Scalable Web Applications", "Professional Web Development"]
 };
 
 export async function generateStaticParams() {

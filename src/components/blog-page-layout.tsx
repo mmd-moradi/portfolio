@@ -23,12 +23,11 @@ export const BlogPageLayout = ({
 }) => 
   {
     const router = useRouter();
-
     return (
       <Container>
         <article>
           <header className="flex flex-col">
-            <Button onClick={() => router.push("/blogs")} variant={"outline"} className="group rounded-full h-10 w-10 px-0 py-0 shadow-md shadow-zinc-900/5 mb-4">
+            <Button onClick={() => router.back()} variant={"outline"} className="group rounded-full h-10 w-10 px-0 py-0 shadow-md shadow-zinc-900/5 mb-4">
               <ArrowLeft className="w-4 h-4 text-zinc-500 group-hover:text-zinc-700 dark:text-secondary-foreground dark:group-hover:text-primary/80" />
             </Button>
             <Heading className="py-4">{meta.title}</Heading>
@@ -37,13 +36,13 @@ export const BlogPageLayout = ({
                 {formatDate(meta.publishedAt)}
               </Paragraph>
             </div>
-            <div className="w-full mt-4 aspect-w-16 aspect-h-10 bg-gray-100 rounded-lg overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative">
+            <div className="w-full mt-4 bg-gray-100 rounded-lg overflow-hidden relative">
               <Image
                 src={meta.thumbnail}
                 alt="thumbnail"
                 height="900"
                 width="900"
-                className={`object-cover object-left-top w-full max-h-96`}
+                className={`object-cover object-left-top w-full`}
               />
             </div>
           </header>
