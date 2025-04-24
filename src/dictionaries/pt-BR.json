@@ -276,9 +276,10 @@
         "description": "Startup B2B",
         "location": "Brasil, Distrito Federal - Híbrido",
         "responsibilities": [
-          "Contribuí para a construção e design de software interno e sistemas de automação para gerenciar operações, reduzindo tarefas manuais em 40% e melhorando a velocidade operacional em 60%, o que foi crucial para a eficiência do negócio.",
-          "Desenvolvi e projetei a landing page juntamente com um formulário de lead em múltiplas etapas para otimizar a aquisição de usuários.",
-          "Criei e projetei o aplicativo móvel, incluindo wireframing, prototipagem e ideação de recursos voltados para o mercado B2B."
+          "Desenvolvi e mantive a API Core utilizando Go, Fiber, SQLC, Goose, Swagger e RabbitMQ, aplicando arquitetura orientada a eventos e DDD (Domain-Driven Design).",
+          "Criei e implementei, do backend ao frontend, as funcionalidades de Avaliação de Talentos e Perfil do Talento, incluindo lógica de negócios e integração de componentes na interface.",
+          "Automatizei fluxos operacionais internos, reduzindo em 30% as tarefas manuais e acelerando o processamento de escalas.",
+          "Realizei o deploy dos serviços backend com Docker e AWS (EC2 para hospedagem, S3 para armazenar imagens dos talentos), além de configurar monitoramento com Prometheus e Grafana para acompanhar desempenho e gerar alertas."
         ]
       },
       {
@@ -296,9 +297,9 @@
         "description": "Empresa de recursos humanos",
         "location": "Brasil, Distrito Federal - Remoto",
         "responsibilities": [
-          "Melhorei a página de aterrissagem existente, aprimorando o design UI/UX e implementando novos recursos.",
+          "Reconstruí toda a landing page, melhorando o design de UI/UX e implementando novas funcionalidades.",
           "Implementei melhorias de SEO para aumentar a visibilidade e o tráfego orgânico.",
-          "Colaborei com a equipe no design UI/UX para criar uma experiência de usuário consistente e envolvente em toda a plataforma."
+          "Colaborei com o time de design para garantir uma experiência de usuário consistente e atrativa em toda a plataforma."
         ]
       },
       {

@@ -277,9 +277,10 @@
         "description": "B2B startup",
         "location": "Brazil, Distrito Federal - Hybrid",
         "responsibilities": [
-          "Contributed to the build and design of internal software and automation systems to manage operations, reducing manual tasks by 40% and improving operational speed by 60%, which was crucial for business efficiency.",
-          "Developed and designed the landing page along with a multi-step lead form to optimize user acquisition.",
-          "Built and designed the mobile app, including wireframing, prototyping, and feature ideation tailored for the B2B market."
+         "Developed and maintained the Core API using Go, Fiber, SQLC, Goose, Swagger, and RabbitMQ, implementing DDD and event-driven architecture.",
+         "Designed and built Talent Rating and Talent Profile functionalities end to end, handling both backend logic and frontend integration and components.",
+         "Enhanced operational workflow automation, reducing manual workload by 30% and increasing processing speed for shift management.",
+         "Deployed backend services using Docker and AWS (EC2 for hosting, S3 for talent image storage). implemented monitoring with Prometheus and Grafana for performance tracking and alerts."
         ]
       },
       {
@@ -297,7 +298,7 @@
         "description": "Human resources company",
         "location": "Brazil, Distrito Federal - Remote",
         "responsibilities": [
-          "Enhanced the existing landing page by improving UI/UX design and implementing new features.",
+          "Rebuilt the entire landing page by improving UI/UX design and implementing new features.",
           "Implemented SEO improvements to increase visibility and organic traffic.",
           "Collaborated with the team on UI/UX design to create a consistent and engaging user experience across the platform."
         ]
