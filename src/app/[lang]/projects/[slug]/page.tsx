@@ -38,7 +38,7 @@ export default async function ProjectPage({params}: {params: {slug: string, lang
   }
   return (
     <Container>
-      <SingleProject project={project} />
+      <SingleProject project={project} lang={params.lang} />
     </Container>
   )
 }

@@ -1,8 +1,8 @@
 {
   "home": {
     "greeting": "👋",
-    "introductionHeading": "Oi! Sou o Mohammad",
-    "introductionParagraph": "Sou um desenvolvedor full-stack com uma {highlight}mentalidade empreendedora{highlight}, apaixonado por ajudar negócios e empresas a construir e melhorar suas soluções de software. Com {highlight}3 anos de experiência{highlight}, foco em criar aplicações web escaláveis, otimizadas e visualmente atraentes.",
+    "introductionHeading": "Oi! Sou Mohammad",
+    "introductionParagraph": "desenvolvedor full-stack com uma {highlight}mentalidade empreendedora{highlight}, apaixonado por ajudar negócios e empresas a construir e melhorar suas soluções de software. Com {highlight}3 anos de experiência{highlight}, foco em criar aplicações web escaláveis, otimizadas e visualmente atraentes.",
     "specializationParagraph": "Minha especialização é em {highlight}Go{highlight}, {highlight}TypeScript{highlight}, {highlight}Next.js{highlight}, {highlight}React{highlight}, {highlight}Node.js{highlight} e trabalho com bancos de dados {highlight}SQL{highlight} e {highlight}NoSQL{highlight} para desenvolver produtos e aplicativos web que causam um impacto significativo. Gosto de colaborar com empresas para dar vida às suas ideias, seja desenvolvendo novo software do zero ou aprimorando sistemas existentes com novos recursos.",
     "projectsHeading": "Nos quais tenho trabalhado",
     "projects": [
@@ -11,7 +11,7 @@
         "title": "Libber",
         "description": "Contribuí o desenvolvimento de uma startup B2B, criando a landing page, software interno e aplicativo móvel, enquanto liderava o design de recursos e automação.",
         "thumbnail": "/images/libber-thumb1.png",
-        "images": ["/images/libber-thumb1.png", "/images/libber-thumb2.png"],
+        "images": ["/images/libber-thumb1.png", "/images/libber-thumb2.png", "/images/libber-3.png"],
         "stack": ["Go", "TypeScript", "Next.js", "React", "Tailwind CSS", "Node.js", "PostgreSQL", "Drizzle ORM", "Docker", "RabbitMQ", "AWS"],
         "slug": "libber"
       },
