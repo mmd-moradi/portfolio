@@ -256,31 +256,31 @@
     "timelines": [
       {
         "company": "Libber",
-        "role": "Fullstack Developer",
+        "role": "Full stack Developer",
         "stacks": [
-          "Go",
-          "TypeScript", 
-          "Next.js", 
           "React", 
+          "Next.js",
+          "TypeScript",
+          "TailwindCSS",
+          "Zustand",
+          "Vite",
+          "TanStack Router",
+          "TanStack Query",
+          "Figma",
+          "Docker",
+          "AWS (IAM, EC2, CloudFront)",
+          "PWA",
+          "Go",
           "PostgreSQL", 
-          "Drizzle ORM", 
-          "TailwindCSS", 
-          "Node.js", 
-          "AWS", 
-          "RabbitMQ", 
-          "Redis", 
-          "Prometheus", 
-          "N8N (Zapier alternative)", 
-          "Grafana"
+          "Drizzle ORM"
         ],
         "date": "05/03/2024 - Presente",
         "description": "B2B startup",
         "location": "Brazil, Distrito Federal - Hybrid",
         "responsibilities": [
-         "Developed and maintained the Core API using Go, Fiber, SQLC, Goose, Swagger, and RabbitMQ, implementing DDD and event-driven architecture.",
-         "Designed and built Talent Rating and Talent Profile functionalities end to end, handling both backend logic and frontend integration and components.",
-         "Enhanced operational workflow automation, reducing manual workload by 30% and increasing processing speed for shift management.",
-         "Deployed backend services using Docker and AWS (EC2 for hosting, S3 for talent image storage). implemented monitoring with Prometheus and Grafana for performance tracking and alerts."
+         "Led the development of the internal Backoffice CRM web interface for managing shifts, talents, and clients using Next.js, improving operational efficiency and reducing manual work by 30%.",
+         "Built a PWA mobile-first web application for managers (PRM) with pixel-perfect responsive design, Keycloak authentication, and features like shift creation, talent evaluation, and management.",
+         "Developed the full Talent web app focused on mobile usability, implementing complete auth flows (OTP, password recovery), and user-facing features such as applying for shifts, profile, viewing history, and rating."
         ]
       },
       {
@@ -288,7 +288,8 @@
         "role": "Frontend Developer",
         "stacks": [
           "TypeScript", 
-          "Next.js", 
+          "Next.js",
+          "React",
           "sanity.io", 
           "stitches", 
           "framer-motion",
@@ -298,8 +299,8 @@
         "description": "Human resources company",
         "location": "Brazil, Distrito Federal - Remote",
         "responsibilities": [
-          "Rebuilt the entire landing page by improving UI/UX design and implementing new features.",
-          "Implemented SEO improvements to increase visibility and organic traffic.",
+          "Created the main landing page using Next.js and Sanity CMS, optimized for SEO, performance, and accessibility.",
+          "Converted Figma designs into reusable components using Stitches and Framer Motion, enhancing UI consistency and visual engagement",
           "Collaborated with the team on UI/UX design to create a consistent and engaging user experience across the platform."
         ]
       },

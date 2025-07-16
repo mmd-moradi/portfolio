@@ -255,31 +255,31 @@
     "timelines": [
       {
         "company": "Libber",
-        "role": "Desenvolvedor Fullstack",
+        "role": "Desenvolvedor Full stack",
         "stacks": [
-          "Go",
-          "TypeScript", 
-          "Next.js", 
           "React", 
+          "Next.js",
+          "TypeScript",
+          "TailwindCSS",
+          "Zustand",
+          "Vite",
+          "TanStack Router",
+          "TanStack Query",
+          "Figma",
+          "Docker",
+          "AWS (IAM, EC2, CloudFront)",
+          "PWA",
+          "Go",
           "PostgreSQL", 
-          "Drizzle ORM", 
-          "TailwindCSS", 
-          "Node.js", 
-          "AWS", 
-          "RabbitMQ", 
-          "Redis", 
-          "Prometheus", 
-          "N8N (alternativa ao Zapier)", 
-          "Grafana"
+          "Drizzle ORM"
         ],
         "date": "05/03/2024 - Presente",
         "description": "Startup B2B",
         "location": "Brasil, Distrito Federal - Híbrido",
         "responsibilities": [
-          "Desenvolvi e mantive a API Core utilizando Go, Fiber, SQLC, Goose, Swagger e RabbitMQ, aplicando arquitetura orientada a eventos e DDD (Domain-Driven Design).",
-          "Criei e implementei, do backend ao frontend, as funcionalidades de Avaliação de Talentos e Perfil do Talento, incluindo lógica de negócios e integração de componentes na interface.",
-          "Automatizei fluxos operacionais internos, reduzindo em 30% as tarefas manuais e acelerando o processamento de escalas.",
-          "Realizei o deploy dos serviços backend com Docker e AWS (EC2 para hospedagem, S3 para armazenar imagens dos talentos), além de configurar monitoramento com Prometheus e Grafana para acompanhar desempenho e gerar alertas."
+          "Liderei o desenvolvimento completo da interface do sistema interno de CRM (Backoffice) para gestão de escalas de trabalho, talentos e clientes, utilizando Next.js. A nova interface reduziu o trabalho manual da equipe operacional em 30%, melhorando o tempo de resposta e eficiência geral.",
+          "Desenvolvi uma aplicação web mobile PWA voltada para gestores (PRM), com design responsivo pixel-perfect, login seguro via Keycloak, e funcionalidades como criação de escala de trabalho, avaliações e gestão de talentos.",
+          "Construí a interface do app mobile web para talentos, com foco em usabilidade mobile-first, incluindo fluxo completo de autenticação (OTP, recuperação de senha) e recursos como inscrição em escalas, visualização de histórico e avaliação de clientes."
         ]
       },
       {
@@ -287,7 +287,8 @@
         "role": "Desenvolvedor Frontend",
         "stacks": [
           "TypeScript", 
-          "Next.js", 
+          "Next.js",
+          "React",
           "sanity.io", 
           "stitches", 
           "framer-motion",
@@ -297,9 +298,8 @@
         "description": "Empresa de recursos humanos",
         "location": "Brasil, Distrito Federal - Remoto",
         "responsibilities": [
-          "Reconstruí toda a landing page, melhorando o design de UI/UX e implementando novas funcionalidades.",
-          "Implementei melhorias de SEO para aumentar a visibilidade e o tráfego orgânico.",
-          "Colaborei com o time de design para garantir uma experiência de usuário consistente e atrativa em toda a plataforma."
+          "Criei a landing page principal com Next.js e Sanity.io, com foco em SEO, performance e acessibilidade, contribuindo para a aquisição de novos clientes.",
+          "Transformei protótipos do Figma em componentes reutilizáveis com Stitches e Framer Motion, garantindo consistência visual e animações modernas."
         ]
       },
       {
